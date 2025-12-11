@@ -1,88 +1,57 @@
-# ZNO Clue Collector - Web Version
+# ZNO Ukrainian Test Database
 
-Mobile-friendly web app for searching ZNO questions!
+🔍 **Smart search engine for ZNO Ukrainian language test questions**
 
-## Files
+Find the right answer fast by adding clues from the question or answer options. Uses fuzzy matching to locate questions even with partial information.
 
-- `index.html` - Main page
-- `style.css` - Dark theme styling
-- `app.js` - Search logic
-- `questions_full.json` - Questions database (copy from parent folder)
+## ✨ Features
 
-## Local Testing
+- **Clue-based search** - Add fragments from questions or answers
+- **Instant matching** - Auto-reveals when 100% confident match found
+- **Fast & optimized** - Two-pass fuzzy search algorithm
+- **Mobile-friendly** - Responsive dark theme design
+- **3400+ questions** - Comprehensive database
 
-```bash
-# Python
-python -m http.server 8000
+## 🚀 How It Works
 
-# Node.js
-npx serve .
+1. **Add clues** - Type text fragments you remember
+   - `+Q` - Search in question text
+   - `+A` - Search in answer options
+2. **Watch results update** - Questions ranked by match score
+3. **Click to view** - See full question, all options, and correct answer
+4. **Victory screen** - Automatically shown when match is certain
 
-# Then open http://localhost:8000
-```
+## 🎯 Use Cases
 
----
+- During test preparation
+- Quick answer lookup
+- Question verification
+- Study aid
 
-## FREE Hosting Options
+## 🛠️ Tech Stack
 
-### 1. GitHub Pages (Recommended - Easiest!)
+- Pure JavaScript (no frameworks)
+- Levenshtein distance fuzzy matching
+- Two-pass optimization (fast filter + detailed scoring)
+- Static site (works on GitHub Pages)
 
-1. Create new repo on GitHub
-2. Upload all files from `Web/` folder to repo root
-3. Go to **Settings → Pages**
-4. Source: **Deploy from a branch** → `main` → `/ (root)`
-5. Save → Your site will be at `https://USERNAME.github.io/REPO-NAME`
+## 📦 Data
 
-### 2. Netlify (Drag & Drop!)
+Contains 3400+ scraped ZNO Ukrainian test questions with:
 
-1. Go to [netlify.com](https://netlify.com)
-2. Sign up (free)
-3. Drag the `Web/` folder onto their dashboard
-4. Done! Get a free `*.netlify.app` domain
+- Question text
+- Multiple choice options (А, Б, В, Г, Д)
+- Matching questions (1-4 mapped to А-Д)
+- Correct answers
 
-### 3. Vercel
+## 🌐 Live Demo
 
-1. Go to [vercel.com](https://vercel.com)
-2. Import from GitHub or upload folder
-3. Free `*.vercel.app` domain
+Visit: [Your GitHub Pages URL]
 
-### 4. Cloudflare Pages
+## 📝 License
 
-1. Go to [pages.cloudflare.com](https://pages.cloudflare.com)
-2. Connect GitHub or direct upload
-3. Free `*.pages.dev` domain
-
-### 5. GitHub Gist (Static HTML only)
-
-GitHub Gists don't serve HTML directly, but you can use:
-
-- [bl.ocks.org](https://bl.ocks.org) - renders gists as pages
-- [GitHack](https://raw.githack.com) - CDN for raw files
+Data scraped from zno.osvita.ua for educational purposes.
 
 ---
 
-## Quick Deploy to GitHub Pages
-
-```bash
-# In the Web folder:
-git init
-git add .
-git commit -m "ZNO Search Web App"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/zno-search.git
-git push -u origin main
-
-# Then enable Pages in repo settings!
-```
-
----
-
-## Custom Domain (Optional)
-
-All services above support custom domains for free:
-
-1. Buy domain (~$10/year from Namecheap, Porkbun, etc.)
-2. Add CNAME record pointing to your hosted site
-3. Configure in hosting dashboard
-
-Enjoy! 🎉
+Made with 🔥 for Ukrainian students

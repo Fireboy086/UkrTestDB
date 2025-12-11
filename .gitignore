@@ -1,0 +1,12 @@
+# Password management script - keep private
+update_password.py
+
+# Deployment scripts
+deploy.sh
+
+# Local development
+*.pyc
+__pycache__/
+.DS_Store
+Thumbs.db
+

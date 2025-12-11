@@ -181,6 +181,12 @@ function removeClue(index) {
   doSearch();
 }
 
+function toggleClue(index) {
+  clues[index].target = clues[index].target === "q" ? "a" : "q";
+  renderClues();
+  doSearch();
+}
+
 function clearClues() {
   clues = [];
   renderClues();
@@ -205,7 +211,7 @@ function renderClues() {
     .map(
       (clue, i) => `
         <div class="clue-tag ${clue.target === "q" ? "question" : "answer"}">
-            <span class="type">${clue.target === "q" ? "Q" : "A"}</span>
+            <span class="type" onclick="toggleClue(${i})" style="cursor: pointer;" title="Click to toggle Q/A">${clue.target === "q" ? "Q" : "A"}</span>
             <span>${escapeHtml(clue.text)}</span>
             <button class="remove" onclick="removeClue(${i})">&times;</button>
         </div>

@@ -155,6 +155,21 @@ body {
   color: white;
 }
 
+.btn-logout {
+  background: transparent;
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+  padding: 0.4rem 0.75rem;
+  font-size: 0.8rem;
+  margin-left: 1rem;
+}
+
+.btn-logout:hover {
+  background: var(--bg-lighter);
+  color: var(--text);
+  border-color: var(--text-dim);
+}
+
 /* ---=== SECTIONS ===--- */
 .section-header {
   display: flex;

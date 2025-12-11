@@ -1,7 +1,7 @@
 // Simple password protection
 // To change password, update the hash below
 
-const PASSWORD_HASH = "4a7d1ed414474e4033ac29ccb8653d9b"; // Default: "zno2025"
+const PASSWORD_HASH = "fa691989"; // Updated: fa691989...
 
 function hashPassword(pass) {
   // Simple hash - good enough for basic protection

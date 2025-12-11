@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZNO Search - Clue Collector</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <h1>ZNO <span class="accent">Clue Collector</span></h1>
+        <p class="subtitle">Add clues, find your answer!</p>
+        <div class="stats" id="stats">
+          <span class="stat"
+            ><span id="questionCount">0</span> questions loaded</span
+          >
+        </div>
+      </header>
+
+      <!-- Clue Input -->
+      <section class="clue-input">
+        <div class="input-group">
+          <input
+            type="text"
+            id="clueText"
+            placeholder="Enter a clue..."
+            autocomplete="off"
+          />
+          <div class="btn-group">
+            <button
+              class="btn btn-question"
+              onclick="addClue('q')"
+              title="Search in question text"
+            >
+              +Q
+            </button>
+            <button
+              class="btn btn-answer"
+              onclick="addClue('a')"
+              title="Search in answer options"
+            >
+              +A
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Active Clues -->
+      <section class="clues-section" id="cluesSection">
+        <div class="section-header">
+          <h2>Your Clues</h2>
+          <button class="btn btn-clear" onclick="clearClues()" id="clearBtn">
+            Clear All
+          </button>
+        </div>
+        <div class="clues-list" id="cluesList">
+          <p class="empty-state">No clues yet. Add some above!</p>
+        </div>
+      </section>
+
+      <!-- Victory Screen (hidden by default) -->
+      <section
+        class="victory"
+        id="victory"
+        style="display: none"
+        onclick="showVictoryFull()"
+      >
+        <div class="victory-header">---===### MATCH FOUND ###===---</div>
+        <div class="victory-answer" id="victoryAnswer"></div>
+        <div class="victory-context" id="victoryContext"></div>
+      </section>
+
+      <!-- Results -->
+      <section class="results-section" id="resultsSection">
+        <h2>Results</h2>
+        <div class="results-list" id="resultsList">
+          <p class="empty-state">Add clues to start searching</p>
+        </div>
+      </section>
+
+      <!-- Question Modal -->
+      <div class="modal" id="questionModal">
+        <div class="modal-content">
+          <button class="modal-close" onclick="closeModal()">&times;</button>
+          <div id="modalBody"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
